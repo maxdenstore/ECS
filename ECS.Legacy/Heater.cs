@@ -20,6 +20,25 @@ namespace ECS.Legacy
         }
     }
 
+    public class FakeHeater : IHeater
+    {
+        public bool isOn{ get; set; }
+        public void TurnOn()
+        {
+            isOn = true;
+        }
+
+        public void TurnOff()
+        {
+            isOn = false;
+        }
+
+        public bool RunSelfTest()
+        {
+            return true;
+        }
+    }
+
     public interface IHeater
     {
         void TurnOn();
