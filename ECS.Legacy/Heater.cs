@@ -1,6 +1,8 @@
-﻿namespace ECS.Legacy
+﻿using System.Diagnostics.Eventing.Reader;
+
+namespace ECS.Legacy
 {
-    public class Heater
+    public class Heater : IHeater
     {
         public void TurnOn()
         {
@@ -16,5 +18,12 @@
         {
             return true;
         }
+    }
+
+    public interface IHeater
+    {
+        void TurnOn();
+        void TurnOff();
+        bool RunSelfTest();
     }
 }
