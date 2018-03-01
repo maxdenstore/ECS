@@ -1,16 +1,15 @@
-﻿using System.Security.Cryptography.X509Certificates;
-using System;
+﻿using System;
 
 namespace ECS.Legacy
 {
-    public class ECSExtention
+    public class EcsExtention
     {
-        public int thresholdsChange { get; set; }
+        public int ThresholdsChange { get; private set; }
 
-        public void setRandom()
+        public void SetRandom()
         {
             Random rnd = new Random();
-            thresholdsChange = rnd.Next(20, 30);
+            ThresholdsChange = rnd.Next(20, 30);
            
         }
     }

@@ -2,14 +2,13 @@
 
 namespace ECS.Legacy
 {
-    public class Application
+    public static class Application
     {
-        public static void Main(string[] args)
+        public static void Main()
         {
-            //rand 20-29 sensor set.
-            var ext = new ECSExtention(); 
-            ext.setRandom();
-            var ecs = new ECS(ext.thresholdsChange,new TempSensor(), new Heater());
+            var ext = new EcsExtention(); 
+            ext.SetRandom();
+            var ecs = new Ecs(ext.ThresholdsChange,new TempSensor(), new Heater());
 
             ecs.Regulate();
 
@@ -17,7 +16,7 @@ namespace ECS.Legacy
 
             ecs.Regulate();
 
-            Console.WriteLine(ext.thresholdsChange);
+            Console.WriteLine(ext.ThresholdsChange);
         }
     }
 }

@@ -1,6 +1,4 @@
-﻿using System.Diagnostics.Eventing.Reader;
-
-namespace ECS.Legacy
+﻿namespace ECS.Legacy
 {
     public class Heater : IHeater
     {

@@ -1,12 +1,12 @@
 ﻿namespace ECS.Legacy
 {
-    public class ECS
+    public class Ecs
     {
         private int _threshold;
         private readonly ITempSensor _tempSensor;   //changed to use interface reference
         private readonly IHeater _heater;           //same
 
-        public ECS(int thr, ITempSensor x, IHeater y)
+        public Ecs(int thr, ITempSensor x, IHeater y)
         {
             SetThreshold(thr);
             _tempSensor = x;
@@ -44,14 +44,14 @@
         }
     }
 
-    public class FakeECS
+    public class FakeEcs
     {
 
         private int _threshold;
-        public readonly ITempSensor _tempSensor;   //changed to use interface reference
-        public readonly IHeater _heater;           //same
+        private readonly ITempSensor _tempSensor;   //changed to use interface reference
+        private readonly IHeater _heater;           //same
 
-        public FakeECS(int thr, ITempSensor x, IHeater y)
+        public FakeEcs(int thr, ITempSensor x, IHeater y)
         {
             SetThreshold(thr);
             _tempSensor = x;
